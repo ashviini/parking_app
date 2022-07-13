@@ -1,11 +1,13 @@
 Instructions to run the code:
 
-Make sure nodejs and npm are installed.
-Run npm install in project directory.
-Run npm start to run the project.
+- Make sure nodejs and npm are installed.
+- Run `npm install` in project directory.
+- Run `npm start` to run the project.
+
 Endpoints available:
 
-Make a parking
+- Make a parking
+```shell
 curl --location --request POST 'http://localhost:4040/parkVehicle' \
 --header 'Content-Type: application/json' \
 --data-raw '{
@@ -14,11 +16,20 @@ curl --location --request POST 'http://localhost:4040/parkVehicle' \
     "vehicleNumber": "UP12XY1234",
     "area": "Random area"
 }'
-Exit parking
+ ```
+
+ - Exit parking
+
+```shell
 curl --location --request POST 'http://localhost:4040/exitParking' \
 --header 'Content-Type: application/json' \
 --data-raw '{
     "parkingLogId": 1653936542059
 }'
-Get vehicle log
+```
+
+- Get vehicle log
+  
+```shell
 curl --location --request GET 'http://localhost:4040/parkInfo/UP12XY1234'
+```
